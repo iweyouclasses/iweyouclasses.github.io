@@ -15,6 +15,7 @@
 	  <script async src="https://cdn.datacamp.com/dcl-react-dev.js.gz"></script>
    </head>
    <body class="size-1280">
+   
       <!-- TOP NAV WITH LOGO -->
       <header>
          <nav>
@@ -27,9 +28,9 @@
                         <ul>
                            <li><a href="../topics/Hello World!.html">Hello World!</a></li>
 						   <li><a href="../topics/Variables.html">Variables</a></li>
-						   <li><a href="../topics/Keyboard input.html">Keyboard input</a></li>
+						   <li><a href="../topics/Keywords.html">Keywords</a></li>
                            <li>
-							  <a href="../topics/Data Types.html">Data Types</a>
+							  <a href="../topics/.html">Data Types</a>
 						      <ul>
 							     <li><a href="../topics/Tuple Data Type.html">Tuple Data Type</a></li>
 							     <li><a href="../topics/String Data Type.html">String Data Type</a></li>
@@ -155,9 +156,9 @@
                      <ul>
                         <li><a href="../topics/Hello World!.html">Hello World!</a></li>
 						   <li><a href="../topics/Variables.html">Variables</a></li>
-						   <li><a href="../topics/Keyboard input.html">Keyboard input</a></li>
+						   <li><a href="../topics/Keywords.html">Keywords</a></li>
                            <li>
-							  <a href="../topics/Data Types.html">Data Types</a>
+							  <a href="../topics/.html">Data Types</a>
 						      <ul>
 							     <li><a href="../topics/Tuple Data Type.html">Tuple Data Type</a></li>
 							     <li><a href="../topics/String Data Type.html">String Data Type</a></li>
@@ -208,33 +209,117 @@
                </aside>
                <!-- CONTENT -->
                <section class="s-12 l-6">
-                  <h1>Hello World!</h1>
-                  <p>A simple program that displays “Hello, World!”. It's often used to illustrate the syntax of the language.</p><br>
-				  <p><strong>What Why When Where & How PRINT?</strong></p><br>
-				  <p>Print is a reserved <strong>Python Keyword</strong> and is a function that outputs to your console window 
-				     whatever you say you want to print out. At first blush, it might appear that the print function is rather 
-					 useless for programming, but it is actually one of the most widely used functions in all of python.
-				  </p>
-				  <p>We can print by using <strong>single apostrophe or double apostrophe</strong> as shown below</p><br>
-					<pre class="ex3">>>>print('Hello World!')<br><span class="ex2">#using single apostrophe</span><br>Hello World!<br>>>>print("Hello World!")<br><span class="ex2">#using double apostrophe</span><br>Hello World!<br></pre>
-						<br>
-					</code>
-					<iframe width="350" height="200" src="https://www.youtube.com/embed/fCbfQTbSC3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<div class="exercise">
-						<div data-datacamp-exercise data-lang="python" data-height="3">
-						<code data-type="pre-exercise-code"></code>
-						<code data-type="sample-code">
-						#print is print the result
-						print('Hello World!')  #method one using single apostrophe
-						print("Hello World!")  #method two using double apostrophe
-						</code>
-						<code data-type="solution"></code>
-						<code data-type="sct"></code>
-						<div data-type="hint">Just press 'Run'.</div>
-						</div>
-					</div>
-					<br>
-				    <a href="../topics/Variables.html" class="next">Variables>></a>
+                  <h1>Keywords</h1>
+				  <ul>
+				      <li>
+					      <p>The print function enables a Python program to display textual information to the user.</p>
+					  </li>
+				      <li>
+					      <p>Programs may use the input function to obtain information from the user.</p>
+					  </li>
+				      <li>
+					      <p>The simplest use of the input function assigns a string to a variable:</p>
+					      <ul>
+						      <li>
+							      <p><strong>x = input()</strong></p>
+							  </li>
+						  </ul>
+					  </li>
+				  
+				  <br>
+				  <br>
+				      
+					  <li>
+					      <p>The parentheses are empty because, the input function does not require any information to do its job. 
+				             Below program demonstrates that the input function produces a string value.</p>
+					  </li>
+				  <br>
+				  
+				  </ul>
+				 <h4>Shell Exercies</h4><br><ul>
+				 <pre class="ex3">>>>x = input()</span></strong><br><span class="ex2">#enter text</span><br>'hi welcome to Ravula's Tutorials'<br><span class="ex2">#prints value of variable x</span><br>>>>print(x)<br>hi welcome to Ravula's Tutorials</pre>
+				  </ul><br><br>
+				  
+				  <h2>eval function </h2>
+				  <ul>
+						<li> 
+						    <p>The eval function dynamically translates the text provided by the user into an executable form that the program can process</p>
+						</li>
+						<li>
+						    <p>This allows users to provide input in a variety of ﬂexible ways; for example, users can enter multiple entries separated by 
+							   commas, and the eval function evaluates it as a Python tuple</p><br>
+						</li>
+				  </ul>
+						<pre class="ex3">>>>num1, num2 = eval(input('Please enter number 1, number 2: '))<br>>>>print(num1, '+', num2, '=', num1 + num2)</pre>
+				        <ul><br>
+							<p style="color:red";>The following sample run shows how the user now must enter the two numbers at the same time separated by a comma:</p><br>
+							<pre class="ex3"><span style="color:#F9F9F2";>Please enter number 1, number 2: 23, 10<br><span style="color:#F9F9F2";>23 + 10 = 33</span></pre>
+						</ul>
+				  
+				  <br><br>
+				  
+				  
+				  <h2>Type Conversion in Python</h2>
+				  <br>
+				  <ul>
+						<li><strong>Casting</strong> is when you convert a variable value from one type to another</li>
+						<li>In python this is done with functions such as int() or float() or str(). A very common pattern
+    						is that you convert a number, currently as a string into a proper number.</li>
+						<ul><br>
+						<pre class="ex3" style="border:3px; border-style:solid; padding: 1em;background-color:#1B2631";><span style="color:#F9F9F2";>>>>x=input()<br>3<br>>>>print(type(x))<br>class 'str'<br><br>>>>x=int(input())<br>3<br>>>>print(type(x))<br>class 'int'</span></pre>
+						</ul>
+				  <br><br>
+				  </ul>
+				  
+				  <ol>
+				    <li><p><strong>int(a,base) :</strong> This function converts any data type to integer. ‘Base’ specifies the base in which string is if data type is string.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = "10010"<br><span class="ex2"># printing string converting to int base 2</span><br>>>>c = int(s,2)<br>>>>print ("After converting to integer base 2 : ", end="") <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting to integer base 2 : 18</pre><br></ul>
+					
+					<li><p><strong>float() :</strong> This function is used to convert any data type to a floating point number.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = "10010"<br><span class="ex2"># printing string converting to float </span><br>>>>e = float(s)<br>>>>print ("After converting to float : ", end="")<br>>>>print (e) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting to float : 10010.0</pre><br></ul>
+					
+					<li><p><strong>ord() :</strong> This function is used to convert a character to integer.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = '4'<br><span class="ex2"># printing character converting to integer </span><br>>>c = ord(s)<br>>>>print ("After converting character to integer : ",end="") <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting character to integer : 52</pre><br></ul>
+					
+					<li><p><strong>hex() :</strong> This function is to convert integer to hexadecimal string.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = "4"<br><span class="ex2"># printing integer converting to hexadecimal string</span><br>>>>c = hex(56)<br>>>>print ("After converting 56 to hexadecimal string : ",end="")  <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting 56 to hexadecimal string : 0x38</pre><br></ul>
+					
+					<li><p><strong>oct() :</strong> This function is to convert integer to octal string.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = "10010"<br><span class="ex2"># printing integer converting to octal string</span><br>>>>c = oct(56)<br>>>>print ("After converting 56 to octal string : ",end="")  <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting 56 to octal string : 0o70</pre><br></ul>
+					
+					<li><p><strong>tuple() :</strong> This function is used to convert to a tuple.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = 'geeks'<br><span class="ex2"># printing string converting to tuple</span><br>>>>c = tuple(s) )<br>>>>print ("After converting string to tuple : ",end="") <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting string to tuple : ('g', 'e', 'e', 'k', 's')</pre><br></ul>
+					
+					<li><p><strong>set() :</strong> This function returns the type after converting to set.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = 'geeks'<br><span class="ex2"># printing string converting to set</span><br>>>>c = set(s) <br>>>>print ("After converting string to set : ",end="") <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting string to set : {'k', 'e', 's', 'g'}</pre><br></ul>
+					
+					<li><p><strong>list() :</strong> This function is used to convert any data type to a list type.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing string</span> <br>>>>s = 'geeks'<br><span class="ex2"># printing string converting to list</span><br>>>>c = list(s) <br>>>>print ("After converting string to list : ",end="") <br>>>>print (c) </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting string to list : ['g', 'e', 'e', 'k', 's']</pre><br></ul>
+					
+					<li><p><strong>dict() :</strong> This function is used to convert a tuple of order (key,value) into a dictionary.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing integers </span> <br>>>>a,b=1,2<br><span class="ex2"># initializing tuple</span><br>>>>tup = (('a', 1) ,('f', 2), ('g', 3))<br><span class="ex2"># printing integer converting to complex number</span>  <br>>>>c = complex(1,2)<br>>>>print ("After converting integer to complex number : ",end="") <br>>>>print (c)  </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting integer to complex number : (1+2j)</pre><br></ul>
+					
+					<li><p><strong>str() :</strong> Used to convert integer into a string.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing integers </span> <br>>>>a,b=1,2<br><span class="ex2"># initializing tuple</span><br>>>>tup = (('a', 1) ,('f', 2), ('g', 3))<br><span class="ex2"># printing integer converting to string</span>  <br>>>>c = str(a)<br>>>>print ("After converting integer to string : ",end="")  <br>>>>print (c)  </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting integer to string : 1</pre><br></ul>
+					
+					<li><p><strong>complex(real,imag) :</strong> This function converts real numbers to complex(real,imag) number.</p></li><br>
+					<pre class="ex3"><span class="ex2"># initializing integers </span> <br>>>>a,b=1,2<br><span class="ex2"># initializing tuple</span><br>>>>tup = (('a', 1) ,('f', 2), ('g', 3))<br><span class="ex2"># printing tuple converting to expression dictionary</span>  <br>>>>c = dict(tup) <br>>>>print ("After converting tuple to dictionary : ",end="") <br>>>>print (c)  </pre><br><ul>
+					<pre class="ex3"><span class="ex2">After converting tuple to dictionary : {'a': 1, 'f': 2, 'g': 3}</pre><br></ul>
+					
+				  </ol>
+				  
+				  <a href="../topics/variables.html" class="previous"><< Variables</a>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+				  <a href="../topics/Data Types.html" class="next">Data Types >></a>
                </section>
             </div>
          </div>

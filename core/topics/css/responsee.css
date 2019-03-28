@@ -926,3 +926,42 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
   margin:0 auto;
   display:block;
 }
+pre.ex3 {
+			   color: #FFFFFF;
+			   width: auto;
+			   height: auto;
+			   overflow: auto;
+			   border:3px;
+			   border-style:solid;
+			   padding: 1em;
+			   background-color:#1B2631
+			}
+			
+			.ex2{
+				color:#229954;
+				}
+			
+			a {
+			   text-decoration: none;
+			   display: inline-block;
+			   padding: 8px 16px;
+			}
+
+			a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+			.previous {
+				background-color: #f1f1f1;
+				color: black;
+			}
+
+		    .next {
+				background-color: #4CAF50;
+				color: white;
+				}
+				
+			.round {
+				border-radius: 50%;
+			}
