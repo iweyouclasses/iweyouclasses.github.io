@@ -926,6 +926,11 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
   margin:0 auto;
   display:block;
 }
+.bgb{
+	background-color:black;
+	color:white;
+	padding:.2em;
+	}
 pre.ex3 {
 			   color: #FFFFFF;
 			   width: auto;
