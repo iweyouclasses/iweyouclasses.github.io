@@ -107,6 +107,23 @@ mark {
   background: #F3F8A9 none repeat scroll 0 0;
   padding: 0.125rem 0.3125rem;
 }
+/* Youtube iframe start*/
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+/* Youtube iframe end*/
 .size-960 .line {max-width:59.75rem;}
 .size-1140 .line {max-width:71rem;}
 .size-1280 .line {max-width:80rem;}

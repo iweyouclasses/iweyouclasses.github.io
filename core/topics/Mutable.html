@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Core Python String data type</title>
+      <title>Core Python Mutable Objects</title>
       <link rel="stylesheet" href="css/components.css">
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="css/responsee.css">
@@ -27,12 +27,12 @@
                         <ul>
                            <li><a href="../topics/Hello World!.html">Hello World!</a></li>
 						   <li><a href="../topics/Variables.html">Variables</a></li>
-						   <li><a href="../topics/Keyboard input.html">Keyboard input</a></li>
+						   <li><a href="../topics/Keywords.html">Keywords</a></li>
                            <li>
 							  <a href="../topics/Data Types.html">Data Types</a>
 						      <ul>
 							     <li><a href="../topics/Tuple Data Type.html">Tuple Data Type</a></li>
-							     <li><a href="../topics/String.html">String Data Type</a></li>
+							     <li><a href="../topics/String Data Type.html">String Data Type</a></li>
 								 <li><a href="../topics/List Data Type.html">List Data Type</a></li>
 								 <li><a href="../topics/Set Data Type.html">Set Data Type</a></li>
 								 <li><a href="../topics/Frozen Set Data Type.html">Frozen Set Data Type</a></li>
@@ -41,8 +41,8 @@
                               </ul>
 						   </li>
 						   
-						   <li><a href="../topics/Immutable Objects.html">Immutable Objects</a></li>
-						   <li><a href="../topics/Mutable Objects.html">Mutable Objects</a></li>
+						   <li><a href="../topics/Immutable.html">Immutable Objects</a></li>
+						   <li><a href="../topics/Mutable.html">Mutable Objects</a></li>
 						   
                            <li>
                               <a href="../topics/Loops Control Structures.html">Loops/Control Structures</a>
@@ -155,12 +155,12 @@
                      <ul>
                         <li><a href="../topics/Hello World!.html">Hello World!</a></li>
 						   <li><a href="../topics/Variables.html">Variables</a></li>
-						   <li><a href="../topics/Keyboard input.html">Keyboard input</a></li>
+						   <li><a href="../topics/Keywords.html">Keywords</a></li>
                            <li>
 							  <a href="../topics/Data Types.html">Data Types</a>
 						      <ul>
 							     <li><a href="../topics/Tuple Data Type.html">Tuple Data Type</a></li>
-							     <li><a href="../topics/String.html">String Data Type</a></li>
+							     <li><a href="../topics/String Data Type.html">String Data Type</a></li>
 								 <li><a href="../topics/List Data Type.html">List Data Type</a></li>
 								 <li><a href="../topics/Set Data Type.html">Set Data Type</a></li>
 								 <li><a href="../topics/Frozen Set Data Type.html">Frozen Set Data Type</a></li>
@@ -169,8 +169,8 @@
                               </ul>
 						   </li>
 						   
-						   <li><a href="../topics/Immutable Objects.html">Immutable Objects</a></li>
-						   <li><a href="../topics/Mutable Objects.html">Mutable Objects</a></li>
+						   <li><a href="../topics/Immutable.html">Immutable Objects</a></li>
+						   <li><a href="../topics/Mutable.html">Mutable Objects</a></li>
 						   
                            <li>
                               <a href="../topics/Loops Control Structures.html">Loops/Control Structures</a>
@@ -208,114 +208,39 @@
                </aside>
                <!-- CONTENT -->
                <section class="s-12 l-6">
-                  <h1>String data type</h1>
-				  <ul>
-				  <li><p>A String is a sequence of one or more characters enclosed with in single apostrophe ' ' or double apostrophe " "</p></li>
-				  <li><p>In python we don't have <span class="bgb">CHAR</span> data type</p></li>
-				  <li><p>A python string may contins any characters</p></li>
-					<p><strong>Example:</strong></p>
-					</ul>
-					<ul>
-						<pre class="ex3">>>>username="David"<br>>>>email='dwalker@mail.com'<br></pre>
-						<p style="color:red">each character of a python string contains +ve and -ve index values as shown</p>
-						<img src="img/strdt.png" />
-					</ul><br>
-					<ol>
-					<li ><a href="#stringslicing">String slicing</a></li>
-					<li ><a href="#stringhandling">String handling method</a></li>
-					</ol>
+                  <h1>Mutable Objects</h1>
+				  <img src="img/mutable.png" style="float:right"; />
+                  <p>When we modify a data of an object, if the result is stored in same object but not in new object then it is called mutable object.</p><br>
+				  <p><strong>In Python</strong> set, list, dictionary are mutable objects.</p>
 				  <br>
-				  <h3 id="stringslicing"><strong>String slicing</strong></h3>
-				  <p>retriving some portion of a given string</p>
-				  <li><code>Slice operator:- [start:end+1:step]</code></li>
-				  <li>The default values are</li>
-					<code>	
-						<ul>start --- 0</ul>
-						<ul>end+1 --- length of the string</ul>
-						<ul>step &nbsp;--- 1</ul>
-					</code>
-				  <li>If the step is +ve number then second part is end+1</li>
-				  <li>If the step is -ve number then second part is end-1</li>
-				  <ul>
-					<ul>example :-</ul>
-					<ul>
-					<pre class="ex3"><code>>>>x = "COMPUTER"</code></pre></ul>
-					<ul><img src="img/strslc.png"/></ul>
-				  </ul>
-				  <div class="exercise">
+				  <p>From diagram assume <strong>X</strong> is a list variable contains values 10,20<br> after inserting new value '30' still the variable x points to same memory location it is called as mutable object.</p>
+					<br>
+					<pre class="ex3">>>>lst=[10,20]<br><span class="ex2">#print memory address</span><br>>>>print(id(lst))<br>103210<br><span class="ex2">#insert 30 in to list</span><br>>>>lst.append(30)<br><span class="ex2">#print memory address</span><br>>>>print(id(lst))<br>4009782</pre>
+					<br>
+					<div class="video-container">
+						<iframe width="350" height="200" src="https://www.youtube.com/embed/fCbfQTbSC3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				  <br>
+				  <br>
+				  <p>Live exercise</p>
+					<div class="exercise">
 						<div data-datacamp-exercise data-lang="python" data-height="3">
 						<code data-type="pre-exercise-code"></code>
 						<code data-type="sample-code">
-						x="COMPUTER"
-						print(x[0:4])
-						#prints COMP
-						print(x[0:8:2])
-						#prints CMUE
-						print(x[-3:-8:-1])
-						#prints TUPMO
-						print(x[4:])
-						#prints UTER
-						print(x[:-3])
-						#prints COMPU
-						print(x[-2:])
-						#prints ER
+						lst=[10,20]
+						#print memory address
+						print(id(lst))
+						#insert 30 in to list
+						lst.append(30)
+						#print memory address
+						print(id(lst))
 						</code>
 						<code data-type="solution"></code>
 						<code data-type="sct"></code>
 						<div data-type="hint">Just press 'Run'.</div>
 						</div>
 					</div>
-					<div class="video-container">
-						<iframe width="350" height="200" src="https://www.youtube.com/embed/fCbfQTbSC3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
 					<br>
-					<br>
-					<h3 id="stringhandling"><strong>String handling method</strong></h3>
-					<p>There are many string handling following are most widely used string handling methods</p>
-					<ol>
-						<li><strong>capitalize():</strong> Converts the first character to upper case</li>
-						<pre class="ex3">>>>user="python"<br>>>>print(user.capitalize())<br>Python</pre>
-						<br>
-						<li><strong>lower():</strong> Converts string into lower case</li>
-						<pre class="ex3">>>>user="PYTHON<br>>>>print(user.lower())<br>python</pre>
-						<br>
-						<li><strong>upper():</strong> Converts string into upper case</li>
-						<pre class="ex3">>>>user="python"<br>>>>print(user.upper())<br>PYTHON</pre>
-						<br>
-						<li><strong>find():</strong> returns index of the first occurrence of a substring in a main string.<br><ul><ul> if substring not found then returns -1.</ul></ul></li>
-						<pre class="ex3">>>>mystr="This is python"<br>>>>print(mystr.find('is'))<br>2<br>>>>print(mystr.find('Is'))<br>-1 <span class="ex2">#python is case sensitive</span><br>>>>print(mystr.find('was'))<br>-1</pre>
-						<br>
-						<li><strong>count():</strong> use this method to count how many times a sub string has occured in the main string</li>
-						<pre class="ex3">>>>mystr="Python is simple,Python is awesome,python is easy'<br>>>>print(mystr.count('Python'))<br>2<br>>>>print(mystr.count('python'))<br>1 </pre>
-						
-						<br>
-						<li><strong>replace():</strong> use this method to replace one substring with another substring.</li>
-						<pre class="ex3">>>>mystr="This is core python"<br>>>>print(mystr.replace('core','advance'))<br>This is advance python </pre>
-						<br>
-						<li><strong>split():</strong> use this method to divide one into a list of multiple strings at a spliting characters.<br><ul><ul>if the spliting character is not provided then by default it will split at white-space.</ul></ul></li>
-						<pre class="ex3">>>>mystr="python is simple;python is awesome"<br>>>>print(mystr.split(';'))<br>['python is simple' ; 'python is awesome']</pre>
-						<pre class="ex3">>>>mystr="python is simple'<br>>>>print(mystr.split())<br>['python' , 'is' , 'simple'] </pre>
-						<br>
-						<li><strong>join():</strong> use this method to join a list of strings into a single string with a given string</li>
-						<pre class="ex3">>>>lst=['python' , 'is' ,'simple' ]<br>>>>print('->'.join(lst))<br>python->is->simple<br>>>>print(''.join(lst))<br>python is simple </pre>
-						<br>
-						<li><strong>startswith():</strong> use this method to check weather a main string starts with a given substring or not.<br>If yes then returns <span class="bgb">True</span> otherwise returns <span class="bgb">False</span></li>
-						<pre class="ex3">>>>username="David Walker"<br>print(username.startswith("david')<br>False<br>print(username.startswith("David")<br>True </pre>
-						<br>
-						<li><strong>endswith():</strong> use this method to cheack weather a main string ends with a given substring or not.<br>If yes then returns <span class="bgb">True</span> otherwise returns <span class="bgb">False</span></li>
-						<pre class="ex3">>>>username="David Walker"<br>print(username.endswith("walker")<br>False<br>print(username.endswith("Walker")<br>True </pre>
-						<br>
-						<li><strong>strip():</strong> use this method for removing white-space at before start of the value or end of the value.</li>
-						<pre class="ex3">>>>mystr="   David Walker   "<br>>>>print(mystr)<br><span class="ex2">#white-space at start & end of the value</span><br>    David Walker   <br>>>>print(mystr.strip())<br>David Walker </pre>
-						<ul><span style="color:red">Note:</span> To remove white-space only form left side then call <strong>lstrip()</strong> and to remove only from right side then call <strong>rstrip()</strong></ul>
-						<br>
-						<li><strong>isalpha:</strong> Returns True if all characters in the string are in the alphabet</li>
-						<pre class="ex3">>>>mystr="CompanyX"<br>>>>print(mystr.isapha())<br>True</pre>
-						<br>
-						<li><strong>isdigit():</strong>	Returns True if all characters in the string are digits</li>
-						<pre class="ex3">>>>dig=20334<br>>>>print(dig.isdigit())<br>True</pre>
-						<br>
-					<ol>
 				    <a href="../topics/Variables.html" class="next">Variables>></a>
                </section>
             </div>
